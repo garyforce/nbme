@@ -35,11 +35,11 @@ const getDailyForecast = async (location = LOCATION_KEY) => {
   let result = null;
   try {
     const response = await axios.get(
-      `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${location}?apikey=${API_KEY}`
+      `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${location}?apikey=${API_KEY}`
     );
 
     result = response.data;
-    return result[0];
+    return result;
   } catch (error) {
     return error;
   }
@@ -49,11 +49,11 @@ const getHourlyForecast = async (location = LOCATION_KEY) => {
   let result = null;
   try {
     const response = await axios.get(
-      `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${location}?apikey=${API_KEY}`
+      `http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${location}?apikey=${API_KEY}`
     );
 
     result = response.data;
-    return result[0];
+    return result;
   } catch (error) {
     return error;
   }

@@ -14,7 +14,15 @@ function App() {
   };
   return (
     <Router>
-      <input type="text" name="search" placeholder="Input City ZipCode" />
+      <form className="city-input">
+        <label>
+          City Name: <input type="text" name="cityname" required />
+        </label>
+        <label>
+          Zip Code: <input type="text" name="zipcode" required />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
       {isActiveSide && (
         <div className="sideBar-background" onClick={hideSidebar}>
           <div className="sideBar">
@@ -28,7 +36,7 @@ function App() {
       <button onClick={() => setIsActiveSide(true)}>&#9776;</button>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/location" element={<Location />} />
+        <Route path="/location/:id" element={<Location />} />
       </Routes>
     </Router>
   );

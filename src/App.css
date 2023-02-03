@@ -42,8 +42,7 @@ html, body, #root{
 }
 
 input[type=text] {
-  width: 300px;
-  position: fixed;
+  width: 200px;
   right: 0;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -52,8 +51,24 @@ input[type=text] {
   background-color: white;
   /* background-image: url('searchicon.png'); */
   padding: 12px 20px 12px 10px;
+  margin-right: 20px;
+
 }
 
+input[type=submit] {
+  width: 80px;
+  right: 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: grey;
+  padding: 12px 20px 12px 10px;
+}
+.city-input{
+  position: fixed;
+right: 0;
+}
 .sideBar{
   position: absolute;
   height: 100%;
