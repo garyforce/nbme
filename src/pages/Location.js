@@ -5,14 +5,16 @@ import {
   getHourlyForecast,
 } from "../utils.js/request";
 import moment from "moment/moment";
+import { useParams } from "react-router-dom";
 
 const Location = () => {
   const [currentCondition, setCurrentCondition] = useState({});
   const [hourlyForecast, setHourlyForecast] = useState({});
   const [dailyForecast, setDailyForecast] = useState({});
+  const { id } = useParams();
   useEffect(() => {
     (async () => {
-      const res = await getCurrentCondition("07753");
+      const res = await getCurrentCondition(id);
       setCurrentCondition(res);
     })();
     (async () => {

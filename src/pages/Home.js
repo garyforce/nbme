@@ -72,67 +72,6 @@ const Home = () => {
             </tr>
           ))}
         </table>
-        // <Paper sx={{ width: "100%" }}>
-        //   <TableContainer sx={{ maxHeight: 440 }}>
-        //     <Table stickyHeader aria-label="sticky table">
-        //       <TableHead>
-        //         <TableRow>
-        //           <TableCell align="center" colSpan={3}>
-        //             Min
-        //           </TableCell>
-        //           <TableCell align="center" colSpan={3}>
-        //             Max
-        //           </TableCell>
-        //         </TableRow>
-        //         <TableRow>
-        //           <TableCell align="center" colSpan={3}>
-        //             Min
-        //           </TableCell>
-        //           <TableCell align="center" colSpan={3}>
-        //             Max
-        //           </TableCell>
-        //           <TableCell align="center" colSpan={3}>
-        //             IconPhrase
-        //           </TableCell>
-        //           <TableCell align="center" colSpan={3}>
-        //             HasPrecipitation
-        //           </TableCell>
-        //           <TableCell align="center" colSpan={3}>
-        //             PrecipitationType
-        //           </TableCell>
-        //           <TableCell align="center" colSpan={3}>
-        //             PrecipitationIntensity
-        //           </TableCell>
-        //         </TableRow>
-        //       </TableHead>
-        //       <TableBody>
-        //         {rows
-        //           .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-        //           .map((row) => {
-        //             return (
-        //               <TableRow
-        //                 hover
-        //                 role="checkbox"
-        //                 tabIndex={-1}
-        //                 key={row.code}
-        //               >
-        //                 {columns.map((column) => {
-        //                   const value = row[column.id];
-        //                   return (
-        //                     <TableCell key={column.id} align={column.align}>
-        //                       {column.format && typeof value === "number"
-        //                         ? column.format(value)
-        //                         : value}
-        //                     </TableCell>
-        //                   );
-        //                 })}
-        //               </TableRow>
-        //             );
-        //           })}
-        //       </TableBody>
-        //     </Table>
-        //   </TableContainer>
-        // </Paper>
       )}
     </>
   );
